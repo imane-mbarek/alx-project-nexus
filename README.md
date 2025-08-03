@@ -104,11 +104,6 @@ The APIs are documented using **Swagger** and **ReDoc**. You can access the docu
 
 ---
 
-## **Deployment**
-The project is deployed on **Render** and can be accessed at:
-- **Live URL**: https://alx-project-nexus-89gl.onrender.com/
-
----
 
 ## **API Endpoints**
 Here’s a quick overview of the available API endpoints:
