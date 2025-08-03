@@ -11,7 +11,6 @@ from rest_framework.authtoken.models import Token
 from .serializers import (
     RegisterSerializer, LoginSerializer, UserProfileSerializer, ResetPasswordSerializer
 )
-from django.http import JsonResponse
 
 class RegisterView(generics.CreateAPIView):
     serializer_class = RegisterSerializer
@@ -61,5 +60,3 @@ class ResetPasswordView(generics.GenericAPIView):
         return Response({"message": "Password reset link sent"}, status=status.HTTP_200_OK)
 
 
-def home(request):
-    return JsonResponse({"message": "Welcome to Project Nexus API."})
