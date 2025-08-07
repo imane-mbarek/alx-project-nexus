@@ -18,6 +18,32 @@ from django.contrib import admin
 from django.urls import path, include
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
 from .views import home
+from django.http import JsonResponse
+from django.views.generic import TemplateView
+
+
+
+
+
+
+def api_root(request):
+    return JsonResponse({
+        'message': 'Welcome to ALX Project Nexus API',
+        'endpoints': {
+            'admin': '/admin/',
+            'auth': '/api/auth/',
+            'categories': '/api/categories/',
+            'products': '/api/products/',
+            'cart': '/api/cart/',
+            'orders': '/api/orders/',
+            'payments': '/api/payments/',
+            'reviews': '/api/reviews/',
+            'wishlist': '/api/wishlist/',
+            'docs': '/api/docs/',
+            'schema': '/api/schema/',
+            'redoc': '/api/redoc/'
+        }
+    })
 
 urlpatterns = [
     path('admin/', admin.site.urls),
